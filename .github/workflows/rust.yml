@@ -41,7 +41,7 @@ jobs:
           - label: 'vanilla'
           - version: stable
             host: 'x86_64-pc-windows-gnu'
-            packages: 'mingw-w64-x86-64-gcc'
+            packages: 'gcc-mingw-w64-x86-64'
 
     steps:
       - name: Checkout repository
