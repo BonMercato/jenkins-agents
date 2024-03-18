@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y curl build-essential $ADDITIONAL_PACKAG
 
 USER jenkins
 
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain $VERSION --default-host $HOST
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain $VERSION -t $HOST
 ENV PATH="/home/jenkins/.cargo/bin:${PATH}"
 
 RUN rustc --version && cargo --version
