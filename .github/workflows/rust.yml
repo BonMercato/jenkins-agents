@@ -1,4 +1,4 @@
-name: Build and publish Docker images
+name: Build and publish Docker images (Rust)
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -33,14 +33,14 @@ jobs:
       matrix:
         version:
           - stable
-        host: 
-          - 'x86_64-unknown-linux-gnu'
-          - 'x86_64-pc-windows-gnu'
+          - nightly
         include:
-          - packages: ''
-          - label: 'vanilla'
+          - host: 'x86_64-unknown-linux-gnu'
+            packages: ''
+            label: 'vanilla'
           - host: 'x86_64-pc-windows-gnu'
             packages: 'gcc-mingw-w64-x86-64'
+            label: 'vanilla'
           - host: 'x86_64-unknown-linux-gnu'
             packages: 'libpq-dev'
             label: 'postgres'
