@@ -86,9 +86,7 @@ jobs:
             type=ref,event=branch
             type=ref,event=tag
             type=ref,event=pr
-            type=raw,value=${{ matrix.label }}
-            type=raw,value=rust-${{ matrix.version }}
-            type=raw,value=${{ matrix.host }}
+            type=raw,value=rust-${{ matrix.version }}+${{ matrix.host }}+${{ matrix.label }}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
