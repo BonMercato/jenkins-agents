@@ -37,6 +37,9 @@ jobs:
         host:
           - x86_64-unknown-linux-gnu
           - x86_64-pc-windows-gnu
+        label:
+          - vanilla
+          - postgres
         include:
           - host: 'x86_64-unknown-linux-gnu'
             packages: ''
