@@ -49,7 +49,7 @@ jobs:
             packages: 'gcc-mingw-w64-x86-64'
             label: 'vanilla'
           - host: 'x86_64-unknown-linux-gnu'
-            packages: 'libpq-dev'
+            packages: 'libpq-dev pkg-config'
             label: 'postgres'
 
     steps:
